@@ -10,9 +10,9 @@ import Foundation
 struct movie: Codable {
     let original_title: String
     let overview: String
-    let poster_path: String    
+    let poster_path: String
 }
 
-struct movieList: Codable {
+struct sampleMovie: Codable {
     let movies: [movie]
 }
