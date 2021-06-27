@@ -9,6 +9,8 @@ import UIKit
 
 class customTableViewCell: UITableViewCell {
     @IBOutlet weak var imagePreview: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var overviewLabel: UILabel!
 }
 
 class ViewController: UIViewController {
@@ -59,7 +61,8 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customTableViewCell", for: indexPath) as? customTableViewCell
         
-//        cell?.nameLabel.text = sampleMovieList?.movies[indexPath.row].original_title
+        cell?.nameLabel.text = sampleMovieList?.movies[indexPath.row].original_title
+        cell?.overviewLabel.text = sampleMovieList?.movies[indexPath.row].overview
         
         let posterURL = sampleMovieList?.movies[indexPath.row].poster_path ?? " "
         

@@ -37,11 +37,46 @@
                                                                 <constraint firstAttribute="width" constant="100" id="U73-Y2-u43"/>
                                                             </constraints>
                                                         </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYS-Gh-nI6">
+                                                            <rect key="frame" x="136" y="40" width="230" height="14.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3e-fw-G0f">
+                                                            <rect key="frame" x="286" y="109" width="80" height="36"/>
+                                                            <color key="backgroundColor" red="0.19223335759999999" green="0.45272659320000003" blue="0.93618069940000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <state key="normal" title="Book">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="small">
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                                </preferredSymbolConfiguration>
+                                                            </state>
+                                                            <connections>
+                                                                <segue destination="cdb-mT-UL7" kind="show" id="72e-sF-Hlu"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tat-zk-M7W">
+                                                            <rect key="frame" x="136" y="14" width="230" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
+                                                        <constraint firstItem="y3e-fw-G0f" firstAttribute="leading" relation="lessThanOrEqual" secondItem="KtD-wD-q05" secondAttribute="trailing" constant="176" id="46Z-cq-Sxv"/>
+                                                        <constraint firstItem="bYS-Gh-nI6" firstAttribute="leading" secondItem="KtD-wD-q05" secondAttribute="trailing" constant="26" id="4YK-pt-DfE"/>
+                                                        <constraint firstAttribute="bottom" secondItem="y3e-fw-G0f" secondAttribute="bottom" constant="13" id="6II-8p-8TA"/>
                                                         <constraint firstItem="KtD-wD-q05" firstAttribute="leading" secondItem="TGs-w3-Lpg" secondAttribute="leading" constant="10" id="6tH-vP-4yo"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Tat-zk-M7W" secondAttribute="trailing" constant="8" id="LbW-mG-AdB"/>
+                                                        <constraint firstItem="bYS-Gh-nI6" firstAttribute="top" secondItem="Tat-zk-M7W" secondAttribute="bottom" constant="8" symbolic="YES" id="Nb8-pi-TUd"/>
+                                                        <constraint firstItem="Tat-zk-M7W" firstAttribute="leading" secondItem="KtD-wD-q05" secondAttribute="trailing" constant="26" id="YP7-xl-9nN"/>
+                                                        <constraint firstAttribute="trailing" secondItem="y3e-fw-G0f" secondAttribute="trailing" constant="8" id="ge5-vM-ncK"/>
+                                                        <constraint firstAttribute="trailing" secondItem="bYS-Gh-nI6" secondAttribute="trailing" constant="8" id="hBJ-9O-C0P"/>
                                                         <constraint firstItem="KtD-wD-q05" firstAttribute="centerY" secondItem="TGs-w3-Lpg" secondAttribute="centerY" id="iYP-Na-Q00"/>
+                                                        <constraint firstItem="Tat-zk-M7W" firstAttribute="top" secondItem="TGs-w3-Lpg" secondAttribute="top" constant="14" id="rSA-52-9E1"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -54,6 +89,8 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="imagePreview" destination="KtD-wD-q05" id="RyQ-gM-HAG"/>
+                                            <outlet property="nameLabel" destination="Tat-zk-M7W" id="YWp-i8-FTX"/>
+                                            <outlet property="overviewLabel" destination="bYS-Gh-nI6" id="Zc1-M5-1t7"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -75,6 +112,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ga0-vC-jvk">
+            <objects>
+                <viewController id="cdb-mT-UL7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iaK-kB-3AT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Ab7-aU-MaV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MPy-G8-88E"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4OS-lL-aCG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1120" y="131"/>
         </scene>
     </scenes>
     <resources>
