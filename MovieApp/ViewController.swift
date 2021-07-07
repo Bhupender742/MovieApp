@@ -47,7 +47,13 @@ extension ViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You tapped me.")
+        performSegue(withIdentifier: "showDetails", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? MovieViewController {
+            destination.previewMovie = sampleMovieList?.movies[(tableView.indexPathForSelectedRow?.row)!]
+        }
     }
     
 }
