@@ -16,6 +16,10 @@ class customTableViewCell: UITableViewCell {
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBAction func unwindSegue(_ sender: UIStoryboardSegue) {
+        
+    }
         
     var sampleMovieList: sampleMovie?
     let baseURL: String = "https://image.tmdb.org/t/p/w92"
