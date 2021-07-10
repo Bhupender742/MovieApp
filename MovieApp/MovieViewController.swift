@@ -13,7 +13,7 @@ class MovieViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var overviewLabel: UILabel!
     
-    var previewMovie: movie?
+    var previewMovie: Movie?
     
     let baseURL: String = "https://image.tmdb.org/t/p/w92"
 

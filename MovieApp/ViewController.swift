@@ -7,12 +7,6 @@
 
 import UIKit
 
-class customTableViewCell: UITableViewCell {
-    @IBOutlet weak var imagePreview: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var overviewLabel: UILabel!
-}
-
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
@@ -21,7 +15,7 @@ class ViewController: UIViewController {
         
     }
         
-    var sampleMovieList: sampleMovie?
+    var sampleMovieList: SampleMovie?
     let baseURL: String = "https://image.tmdb.org/t/p/w92"
 
     override func viewDidLoad() {
@@ -69,7 +63,7 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "customTableViewCell", for: indexPath) as? customTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customTableViewCell", for: indexPath) as? CustomTableViewCell
         
         cell?.nameLabel.text = sampleMovieList?.movies[indexPath.row].original_title
         cell?.overviewLabel.text = sampleMovieList?.movies[indexPath.row].overview

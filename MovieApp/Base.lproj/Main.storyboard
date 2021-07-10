@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="customTableViewCell" rowHeight="180" id="u6I-he-OiK" customClass="customTableViewCell" customModule="MovieApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="customTableViewCell" rowHeight="180" id="u6I-he-OiK" customClass="CustomTableViewCell" customModule="MovieApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u6I-he-OiK" id="97s-1u-J5l">
@@ -85,9 +85,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="imagePreview" destination="KtD-wD-q05" id="RyQ-gM-HAG"/>
-                                            <outlet property="nameLabel" destination="Tat-zk-M7W" id="YWp-i8-FTX"/>
-                                            <outlet property="overviewLabel" destination="bYS-Gh-nI6" id="Zc1-M5-1t7"/>
+                                            <outlet property="imagePreview" destination="KtD-wD-q05" id="pnd-2I-we9"/>
+                                            <outlet property="nameLabel" destination="Tat-zk-M7W" id="up7-BG-3oZ"/>
+                                            <outlet property="overviewLabel" destination="bYS-Gh-nI6" id="t81-z1-jw7"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

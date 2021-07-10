@@ -20,9 +20,9 @@ func readLocalJSONFile(forName name: String) -> Data? {
     return nil
 }
 
-func parse(jsonData: Data) -> sampleMovie? {
+func parse(jsonData: Data) -> SampleMovie? {
     do {
-        let decodedData = try JSONDecoder().decode(sampleMovie.self, from: jsonData)
+        let decodedData = try JSONDecoder().decode(SampleMovie.self, from: jsonData)
         return decodedData
     } catch {
         print("error: \(error)")

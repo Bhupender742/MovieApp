@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		923BC1262699551C00C10129 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923BC1252699551C00C10129 /* CustomTableViewCell.swift */; };
 		925DDDC9268628100076E9B8 /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = 925DDDC8268628100076E9B8 /* movies.json */; };
 		925DDDCB2686283B0076E9B8 /* MovieDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925DDDCA2686283B0076E9B8 /* MovieDataModel.swift */; };
 		925DDDCD268628F50076E9B8 /* JSONUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925DDDCC268628F50076E9B8 /* JSONUtils.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		923BC1252699551C00C10129 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		925DDDC8268628100076E9B8 /* movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
 		925DDDCA2686283B0076E9B8 /* MovieDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataModel.swift; sourceTree = "<group>"; };
 		925DDDCC268628F50076E9B8 /* JSONUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONUtils.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				928E8DE42685B45500F480F3 /* AppDelegate.swift */,
 				928E8DE62685B45500F480F3 /* SceneDelegate.swift */,
 				928E8DE82685B45500F480F3 /* ViewController.swift */,
+				923BC1252699551C00C10129 /* CustomTableViewCell.swift */,
 				928E8DEA2685B45500F480F3 /* Main.storyboard */,
 				92D9EBF22695565B008462AD /* MovieViewController.swift */,
 				925DDDCC268628F50076E9B8 /* JSONUtils.swift */,
@@ -153,6 +156,7 @@
 				928E8DE92685B45500F480F3 /* ViewController.swift in Sources */,
 				928E8DE52685B45500F480F3 /* AppDelegate.swift in Sources */,
 				925DDDCD268628F50076E9B8 /* JSONUtils.swift in Sources */,
+				923BC1262699551C00C10129 /* CustomTableViewCell.swift in Sources */,
 				925DDDCB2686283B0076E9B8 /* MovieDataModel.swift in Sources */,
 				928E8DE72685B45500F480F3 /* SceneDelegate.swift in Sources */,
 				92D9EBF32695565B008462AD /* MovieViewController.swift in Sources */,

@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct movie: Codable {
+struct Movie: Codable {
     let original_title: String
     let overview: String
     let poster_path: String
 }
 
-struct sampleMovie: Codable {
-    let movies: [movie]
+struct SampleMovie: Codable {
+    let movies: [Movie]
 }
