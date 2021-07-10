@@ -7,12 +7,20 @@
 
 import UIKit
 
+protocol CustomTableViewCellDelegator {
+    func callSegueFromCell(indexPath: IndexPath)
+}
+
 class CustomTableViewCell: UITableViewCell {
     
     
     @IBOutlet weak var imagePreview: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var overviewLabel: UILabel!
+    @IBOutlet weak var bookButton: UIButton!
+    
+    var delegate: CustomTableViewCellDelegator?
+    var indexPath: IndexPath?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,4 +33,8 @@ class CustomTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    
+    @IBAction func bookButtonClicked(_ sender: Any) {
+        delegate?.callSegueFromCell(indexPath: indexPath!)
+    }
 }

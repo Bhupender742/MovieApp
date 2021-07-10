@@ -38,6 +38,8 @@ class ViewController: UIViewController {
 
 }
 
+//MARK: - TableViewDelegator Methods
+
 extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -49,12 +51,24 @@ extension ViewController: UITableViewDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? MovieViewController {
-            destination.previewMovie = sampleMovieList?.movies[(tableView.indexPathForSelectedRow?.row)!]
+        if segue.identifier == "showDetails" {
+            if let destination = segue.destination as? MovieViewController {
+                destination.previewMovie = sampleMovieList?.movies[(tableView.indexPathForSelectedRow?.row)!]
+            }
+        }
+        
+        if segue.identifier == "showMovieDetails" {
+            if let destination = segue.destination as? MovieViewController {
+                if let data = sender as? IndexPath {
+                    destination.previewMovie = sampleMovieList?.movies[data.row]
+                }
+            }
         }
     }
     
 }
+
+//MARK: - TableViewDataSource Methods
 
 extension ViewController: UITableViewDataSource {
     
@@ -64,6 +78,9 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customTableViewCell", for: indexPath) as? CustomTableViewCell
+        
+        cell?.delegate = self
+        cell?.indexPath = indexPath
         
         cell?.nameLabel.text = sampleMovieList?.movies[indexPath.row].original_title
         cell?.overviewLabel.text = sampleMovieList?.movies[indexPath.row].overview
@@ -89,3 +106,10 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
+//MARK: - CustomViewDelegator Methods
+
+extension ViewController: CustomTableViewCellDelegator {
+    func callSegueFromCell(indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "showMovieDetails", sender: indexPath)
+    }
+}
