@@ -46,16 +46,17 @@ extension ViewController: UITableViewDelegate {
         return 180
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showDetails", sender: self)
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        performSegue(withIdentifier: "showDetails", sender: self)
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetails" {
-            if let destination = segue.destination as? MovieViewController {
-                destination.previewMovie = sampleMovieList?.movies[(tableView.indexPathForSelectedRow?.row)!]
-            }
-        }
+        
+//        if segue.identifier == "showDetails" {
+//            if let destination = segue.destination as? MovieViewController {
+//                destination.previewMovie = sampleMovieList?.movies[(tableView.indexPathForSelectedRow?.row)!]
+//            }
+//        }
         
         if segue.identifier == "showMovieDetails" {
             if let destination = segue.destination as? MovieViewController {
